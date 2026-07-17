@@ -8,8 +8,9 @@ def explain_verdict(state: AgentState):
     is_suspicious = state["is_suspicious"]
     prev_errors = state.get("validation_errors")
     
-    # Using the unquantized base model for now
-    llm = ChatOllama(model="qwen2.5:7b", temperature=0.1, format="json")
+    # Model is injected dynamically by the benchmark runner via state["model_name"]
+    model = state["model_name"]
+    llm = ChatOllama(model=model, temperature=0.1, format="json")
     
     # If the investigator flagged it clean, provide a standard empty compliance log
     if not is_suspicious:

@@ -38,10 +38,12 @@
 * **Objective:** Build `benchmark.py` and run Teacher vs Student evaluation.
 * **Actions Completed:**
   * Created `src/benchmark.py` — loads 20 transactions, runs full pipeline per model, writes results CSV.
-  * Teacher model (`qwen2.5:7b-instruct-q8_0`) currently downloading (~8.1 GB).
-* **Pending:**
-  * Run `python src/benchmark.py` once Q8 model pull completes.
-  * Record compliance rates and average revision counts for both models.
+  * Pulled Teacher model `qwen2.5:7b-instruct-q8_0` (8.1 GB).
+  * **Benchmark run complete (2026-07-17):**
+    * Teacher (Q8): **100% compliance rate**, 0 avg revisions
+    * Student (Q4): **100% compliance rate**, 0 avg revisions
+  * Results saved to `data/benchmark_results.csv`.
+* **Finding:** No compliance degradation observed between Q4 and Q8 at the 7B parameter scale. Qwen2.5's instruction-following is robust enough that 4-bit quantization doesn't affect structured JSON schema adherence. This establishes a floor — the degradation hypothesis would require testing smaller models (1B–3B) or more aggressive quantization (Q2/Q3).
 
 ---
 

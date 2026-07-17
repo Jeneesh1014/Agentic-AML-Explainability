@@ -1,24 +1,24 @@
 transaction_id,model_label,model_tag,revisions_needed,passed_schema_audit,notes
-TXN-0001,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0002,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0003,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0004,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0005,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0006,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0007,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0008,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0009,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0010,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0011,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0012,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0013,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0014,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0015,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0016,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0017,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0018,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0019,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
-TXN-0020,Teacher (Q8),qwen2.5:7b-instruct-q8_0,-1,False,model 'qwen2.5:7b-instruct-q8_0' not found (status code: 404)
+TXN-0001,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0002,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0003,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0004,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0005,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0006,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0007,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0008,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0009,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0010,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0011,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0012,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0013,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0014,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0015,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0016,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0017,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0018,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0019,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
+TXN-0020,Teacher (Q8),qwen2.5:7b-instruct-q8_0,0,True,
 TXN-0001,Student (Q4),qwen2.5:7b,0,True,
 TXN-0002,Student (Q4),qwen2.5:7b,0,True,
 TXN-0003,Student (Q4),qwen2.5:7b,0,True,

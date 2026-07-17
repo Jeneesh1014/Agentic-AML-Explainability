@@ -94,9 +94,18 @@ python src/benchmark.py
 
 Results are logged to `data/benchmark_results.csv`.
 
+## Benchmark Results
+
+| Model | Quantization | Size | Schema Compliance Rate | Avg Revisions Needed |
+|---|---|---|---|---|
+| `qwen2.5:7b-instruct-q8_0` (Teacher) | 8-bit | 8.1 GB | **100%** | 0.00 |
+| `qwen2.5:7b` (Student) | 4-bit (Q4_K_M) | 4.7 GB | **100%** | 0.00 |
+
+**Finding:** At 7B parameters, Qwen2.5's structured output capability is robust enough that 4-bit quantization introduces zero measurable compliance degradation compared to 8-bit. Both models produced valid, Pydantic-passing BaFin JSON on the first attempt across all 20 transactions — no self-correction loops were ever triggered.
+
+This result is itself meaningful: it establishes a **floor** for where quantization-induced compliance degradation begins. For models this size, Q4 is sufficient for structured regulatory output tasks. The degradation hypothesis would be better tested against smaller models (e.g., 1B or 3B parameter families) or more aggressive quantization (Q2/Q3).
+
 ## What the Benchmark Measures
 
 - **Schema Compliance Rate:** percentage of transactions where the Explainer produced valid Pydantic output on the final attempt.
-- **Revisions Needed:** how many times the self-correction loop fired before the Auditor accepted the JSON.
-
 A meaningful drop in compliance rate or a spike in average revisions for the Q4 Student vs the Q8 Teacher quantifies the cost of model compression in a regulated AI workflow.

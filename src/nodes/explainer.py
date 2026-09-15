@@ -2,7 +2,14 @@ import json
 from langchain_ollama import ChatOllama
 from state import AgentState
 
-def explain_verdict(state: AgentState):
+def explain_verdict(state: AgentState) -> dict:
+    """
+    Node 2: Explainer.
+
+    Generates a structured JSON explanation complying with BaFin standards.
+    Reads the target model from state to support dynamic model evaluation.
+    Incorporates prior auditor validation errors to enable self-correction.
+    """
     print("--- EXPLAINER NODE ---")
     tx = state["transaction_data"]
     is_suspicious = state["is_suspicious"]

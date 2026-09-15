@@ -1,9 +1,9 @@
 """
-benchmark.py – Runs the full AML pipeline for every transaction
+benchmark.py: Runs the full AML pipeline for every transaction
 in data/transactions.jsonl against two models:
 
-  Teacher : qwen2.5:7b-q8_0  (8-bit quantised, ~7.7 GB)
-  Student : qwen2.5:7b        (4-bit quantised Q4_K_M, ~4.7 GB, Ollama default)
+  Teacher : qwen2.5:7b-instruct-q8_0  (8-bit quantised, ~7.7 GB)
+  Student : qwen2.5:7b                (4-bit quantised Q4_K_M, ~4.7 GB, Ollama default)
 
 For each transaction the script records:
   - Whether the Auditor's Pydantic schema validation passed on the first try.

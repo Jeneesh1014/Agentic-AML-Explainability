@@ -11,7 +11,13 @@ from nodes.investigator import investigate
 from nodes.explainer import explain_verdict
 from nodes.auditor import audit_explanation
 
-def route_after_auditor(state: AgentState):
+def route_after_auditor(state: AgentState) -> str:
+    """
+    Deterministic routing function after the Auditor evaluation.
+
+    Returns END if validation passed or revision limit (3) is reached.
+    Returns 'explainer' to trigger self-correction retry loop when errors exist.
+    """
     # If there are no validation errors, the explanation is BaFin compliant.
     if state.get("validation_errors") is None:
         return END

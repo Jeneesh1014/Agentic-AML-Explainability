@@ -36,7 +36,7 @@ def make_prompt(fraud_type: str, tx_index: int) -> str:
     if fraud_type == "Smurfing":
         amount_hint = "The amount MUST be between 9500.00 and 9990.00 (structuring just below €10k)."
     elif fraud_type == "Velocity Fraud":
-        amount_hint = "The amount can be any realistic value (1000–50000)."
+        amount_hint = "The amount can be any realistic value (1000-50000)."
     else:
         amount_hint = "The amount should be a realistic everyday transaction under 5000.00 (groceries, rent, salary, etc.)."
 

@@ -11,11 +11,11 @@ from state import AgentState
 
 def investigate(state: AgentState) -> dict:
     """
-    Node 1 – Investigator.
+    Node 1: Investigator.
 
     Analyses raw transaction data and decides whether it is suspicious.
     Uses the model specified in state["model_name"] so the benchmark runner
-    can swap the Teacher (qwen2.5:7b-q8_0) against the Student (qwen2.5:7b)
+    can swap the Teacher (qwen2.5:7b-instruct-q8_0) against the Student (qwen2.5:7b)
     without modifying source files.
     """
     print("--- INVESTIGATOR NODE ---")
@@ -50,9 +50,9 @@ def investigate(state: AgentState) -> dict:
         is_suspicious = bool(result.get("is_suspicious", False))
         reason = result.get("reason", "No reason provided.")
     except (json.JSONDecodeError, ValueError):
-        # Default safe fallback – treat as suspicious if we can't parse
+        # Default safe fallback: treat as suspicious if parsing fails
         is_suspicious = True
-        reason = "Parse error – defaulting to suspicious."
+        reason = "Parse error: defaulting to suspicious."
 
     flag = "SUSPICIOUS ⚠️" if is_suspicious else "CLEAN ✅"
     print(f"Investigator Result: {flag} | {reason}")
